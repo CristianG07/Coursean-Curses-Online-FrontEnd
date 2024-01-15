@@ -1,6 +1,3 @@
-import hero_img from '../assets/images/hero_img.png'
-import logo_udemy from '../assets/images/logo_udemy.svg'
-
 import aws_1 from '../assets/images/aws_1.jpg'
 import aws_2 from '../assets/images/aws_2.jpg'
 import aws_3 from '../assets/images/aws_3.jpg'
@@ -55,8 +52,6 @@ const course_images = {
   design_2
 }
 
-const other_images = { hero_img, logo_udemy }
-
 const categories_images = [
   cat_python,
   cat_web_development,
@@ -66,4 +61,4 @@ const categories_images = [
   cat_marketing
 ]
 
-export { course_images, other_images, categories_images }
+export { course_images, categories_images }

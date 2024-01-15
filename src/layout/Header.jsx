@@ -3,24 +3,21 @@ import { MdOutlineShoppingCart } from 'react-icons/md'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
 import { NavBar } from '../components/header/NavBar'
+import { useNavbarContext } from '../context/NavbarContext'
 
 export const Header = () => {
   const [countItemCart, setCountItemCart] = useState(0)
-  const [isOpen, setIsOpen] = useState(false)
-
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
+  const { OpenNavbar } = useNavbarContext()
 
   return (
     <header className='shadow-md'>
-      <nav className='flex items-center justify-between container mx-auto px-7 h-20'>
-        <Link to='/' className='text-xl font-extrabold'>
+      <nav className='containers flex items-center justify-between h-20'>
+        <Link to='/' className='text-xl md:text-3xl font-extrabold'>
           <span className='text-orange-400'>C</span>OURSEAN
         </Link>
 
         <div>
-          <NavBar isOpen={isOpen} handleClick={handleClick} />
+          <NavBar />
           <div className='flex items-center gap-5'>
             <Link to='/' className='relative'>
               <MdOutlineShoppingCart size={25} />
@@ -30,7 +27,7 @@ export const Header = () => {
                 </span>
               )}
             </Link>
-            <button onClick={() => handleClick()}>
+            <button onClick={() => OpenNavbar()}>
               <FaBars size={23} />
             </button>
           </div>

@@ -7,19 +7,39 @@
 /* global styles and resets */
 *,
 *::after,
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    font-family: 'Raleway', sans-serif;
-    overflow: hidden;
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
-img{
-    width: 100%;
-    display: block;
+
+@layer components {
+  .sliceBtn {
+    @apply bg-black text-white rounded-full transition-all duration-500 hover:contrast-50 mx-1
+  }
+  .CardInfoHero {
+    @apply absolute top-0 h-full grid items-center px-5 ml-0 md:ml-16 max-w-[30rem]
+  }
+  .tabsBtn {
+    @apply border border-black px-4 py-2 capitalize font-medium
+  }
+  .containers {
+    @apply container mx-auto px-7
+  }
+}
+
+@layer utilities {
+  .hoverBtnBlack {
+    @apply hover:bg-black hover:text-white duration-700
+  }
+  .hoverBtnWhite {
+    @apply hover:bg-white hover:text-black duration-700 
+  }
 }

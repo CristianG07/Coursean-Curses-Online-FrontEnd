@@ -1,13 +1,25 @@
+import hero_img from '../assets/images/hero_img.png'
+import hero_img2 from '../assets/images/hero_img2.jpg'
+import hero_img3 from '../assets/images/hero_img3.jpg'
+import hero_img4 from '../assets/images/hero_img4.jpg'
 import { course_images } from "./images";
 
 export const category_links = [
-    {name: 'PYTHON', link: '/'},
-    {name: 'WEB DEVELOPMENT', link: '/'},
-    {name: 'DATA SCIENCE', link: '/'},
-    {name: 'AWS', link: '/'},
-    {name: 'DESIGN', link: '/'},
-    {name: 'MARKETING', link: '/'}
+    {name: 'python', link: '/'},
+    {name: 'web development', link: '/'},
+    {name: 'data science', link: '/'},
+    {name: 'aws', link: '/'},
+    {name: 'design', link: '/'},
+    {name: 'marketing', link: '/'}
 ]
+
+
+export const data_hero = [
+    { img: hero_img, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
+    { img: hero_img2, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
+    { img: hero_img3, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
+    { img: hero_img4, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
+  ]
 
 
 export const courses = [
