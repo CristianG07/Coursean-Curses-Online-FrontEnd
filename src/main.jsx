@@ -12,13 +12,16 @@ import 'swiper/css/navigation'
 // Import Contexts
 import { NavbarProvider } from './context/NavbarContext.jsx'
 import { TabsProvider } from './context/TabsContext.jsx'
+import { CoursesProvider } from './context/CoursesContex.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <NavbarProvider>
-      <TabsProvider>
-        <App />
-      </TabsProvider>
-    </NavbarProvider>
+    <CoursesProvider>
+      <NavbarProvider>
+        <TabsProvider>
+          <App />
+        </TabsProvider>
+      </NavbarProvider>
+    </CoursesProvider>
   </BrowserRouter>
 )

@@ -33,13 +33,16 @@ body {
   .containers {
     @apply container mx-auto px-7
   }
+  .cardCategory {
+    @apply p-7 bg-slate-100 text-center grid gap-5 rounded shadow hover:shadow-xl duration-500
+  }
 }
 
 @layer utilities {
   .hoverBtnBlack {
-    @apply hover:bg-black hover:text-white duration-700
+    @apply hover:bg-black hover:text-white transition duration-700
   }
   .hoverBtnWhite {
-    @apply hover:bg-white hover:text-black duration-700 
+    @apply hover:bg-white hover:text-black transition duration-700 
   }
 }

@@ -2,23 +2,23 @@ import hero_img from '../assets/images/hero_img.png'
 import hero_img2 from '../assets/images/hero_img2.jpg'
 import hero_img3 from '../assets/images/hero_img3.jpg'
 import hero_img4 from '../assets/images/hero_img4.jpg'
-import { course_images } from "./images";
+import { course_images, categories_images } from "./images";
 
 export const category_links = [
-    {name: 'python', link: '/'},
-    {name: 'web development', link: '/'},
-    {name: 'data science', link: '/'},
-    {name: 'aws', link: '/'},
-    {name: 'design', link: '/'},
-    {name: 'marketing', link: '/'}
+    {name: 'python', link: '/category/python', image: categories_images.cat_python},
+    {name: 'web development', link: '/category/web development', image: categories_images.cat_web_development},
+    {name: 'data science', link: '/category/data science', image: categories_images.cat_data_science},
+    {name: 'aws', link: '/category/aws', image: categories_images.cat_aws},
+    {name: 'design', link: '/category/design', image: categories_images.cat_design},
+    {name: 'marketing', link: '/category/marketing', image: categories_images.cat_marketing}
 ]
 
 
 export const data_hero = [
-    { img: hero_img, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
+    { img: hero_img, title: "You're back, welcome back!", desc: "Stand out from the crowd with the latest skills. Get courses from $29,00 during this special offer." },
     { img: hero_img2, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
-    { img: hero_img3, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
-    { img: hero_img4, title: 'Save Big. Learn Big.', desc: "Shop our big sale for courses from $9.99. If you wnat to learn it, chances are we've got it. Ends Aug. 31." },
+    { img: hero_img3, title: "Don't just explore the web, design it!", desc: "Learn web design, from the basics of user experience to graphic design. Bring your skills up to date." },
+    { img: hero_img4, title: "Get great advantages", desc: "Join our mailing list to receive special offers, personalized course recommendations and much more." },
   ]
 
 

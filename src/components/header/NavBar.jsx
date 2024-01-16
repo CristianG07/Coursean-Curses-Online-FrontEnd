@@ -22,7 +22,7 @@ export const NavBar = () => {
             <li key={i} className='group'>
               <Link
                 to={item.link}
-                className='inline-block w-full text-sm font-medium group-hover:underline group-hover:underline-offset-[3px] group-hover:pl-2 duration-500 uppercase'
+                className='inline-block w-full text-sm font-medium group-hover:underline group-hover:underline-offset-[3px] group-hover:pl-2 duration-500 uppercase select-none'
               >
                 {item.name}
               </Link>
