@@ -15,7 +15,7 @@ export const Cart = () => {
 
   return (
     <section className='containers flex flex-col md:flex-row gap-8 my-5'>
-      <div className='w-full lg:w-[75%] mx-auto'>
+      <div className='w-full lg:w-[75%]'>
         <div className='flex justify-between mb-2'>
           <div>
             <h5 className='text-lg font-bold'>Shopping Cart</h5>
