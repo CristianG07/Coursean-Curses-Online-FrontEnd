@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import { MdOutlineShoppingCart } from 'react-icons/md'
 import { FaBars } from 'react-icons/fa'
-import { useState } from 'react'
 import { NavBar } from '../components/header/NavBar'
 import { useNavbarContext } from '../context/NavbarContext'
+import { useCartContext } from '../context/CartContext'
 
 export const Header = () => {
-  const [countItemCart, setCountItemCart] = useState(0)
+  const { total_items } = useCartContext()
   const { OpenNavbar } = useNavbarContext()
 
   return (
@@ -19,11 +19,11 @@ export const Header = () => {
         <div>
           <NavBar />
           <div className='flex items-center gap-5'>
-            <Link to='/' className='relative'>
+            <Link to='/cart' className='relative'>
               <MdOutlineShoppingCart size={25} />
-              {countItemCart > 0 && (
-                <span className='absolute -top-4 -right-2 bg-orange-500 px-2 text-center text-white rounded-full'>
-                  {countItemCart}
+              {total_items > 0 && (
+                <span className='absolute text-center font-sans text-sm font-medium -top-4 -right-2 bg-orange-500 h-6 w-6 flex items-center justify-center text-white rounded-full'>
+                  {total_items}
                 </span>
               )}
             </Link>

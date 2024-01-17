@@ -5,8 +5,9 @@ import { useNavbarContext } from '../../context/NavbarContext'
 
 export const NavBar = () => {
   const { isNavbarOpen, CloseNavbar } = useNavbarContext()
+
   return (
-    <div className={`${isNavbarOpen ? 'translate-x-0' : 'translate-x-full'} absolute min-w-[19rem] bg-white h-full top-0 right-0 z-10 shadow-lg py-5 px-8 duration-700`}>
+    <div className={`${isNavbarOpen ? 'translate-x-0' : 'translate-x-full overflow-hidden'} fixed min-w-[19rem] bg-white h-screen top-0 right-0 z-10 shadow-lg py-5 px-8 duration-700`}>
       <div className='flex justify-end'>
         <button
           onClick={() => CloseNavbar()}
@@ -22,6 +23,7 @@ export const NavBar = () => {
             <li key={i} className='group'>
               <Link
                 to={item.link}
+                onClick={() => CloseNavbar()}
                 className='inline-block w-full text-sm font-medium group-hover:underline group-hover:underline-offset-[3px] group-hover:pl-2 duration-500 uppercase select-none'
               >
                 {item.name}

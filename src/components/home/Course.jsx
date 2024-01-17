@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 // Context
 import { StarRating } from './StarRating'
+import { useCartContext } from '../../context/CartContext'
 
 export const Course = (props) => {
-  const { id, image, course_name, creator, actual_price, discounted_price, rating_count, rating_star } = props
+  const { addToCart } = useCartContext()
+  const { id, image, course_name, creator, actual_price, discounted_price, rating_count, rating_star, category } = props
+
 
   return (
     <>
@@ -39,6 +42,7 @@ export const Course = (props) => {
             </Link>
             <Link
               to='/cart'
+              onClick={() => addToCart(id, image, course_name, creator, discounted_price, category)}
               className='tabsBtn hoverBtnWhite bg-black text-white font-bold text-xs md:text-base'
             >
               Add to cart

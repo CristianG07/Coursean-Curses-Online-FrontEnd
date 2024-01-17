@@ -9,8 +9,13 @@ export const CardLearn = (props) => {
         <h4 className='text-2xl md:text-3xl font-bold'>What you'll learn</h4>
         <ul className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
           {what_you_will_learn.map((item, i) => (
-            <li key={i} className='flex items-center gap-3 text-sm font-medium text-gray-600'>
-              <BiCheck />
+            <li
+              key={i}
+              className='flex items-center gap-2 text-xs font-medium text-gray-600'
+            >
+              <div>
+                <BiCheck />
+              </div>
               {item}
             </li>
           ))}

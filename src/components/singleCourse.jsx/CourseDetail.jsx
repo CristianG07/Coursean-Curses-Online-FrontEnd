@@ -6,8 +6,10 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { RiClosedCaptioningFill } from 'react-icons/ri'
 // components
 import { StarRating } from '../home/StarRating'
+import { useCartContext } from '../../context/CartContext'
 
 export const CourseDetail = (props) => {
+  const { addToCart } = useCartContext()
   const { id, image, course_name, category, description, rating_star, rating_count, students, creator,  updated_date, lang, discounted_price, actual_price } = props
 
   return (
@@ -71,7 +73,8 @@ export const CourseDetail = (props) => {
               </div>
               <Link
                 to={'/cart'}
-                className='flex w-fit items-center gap-2 px-6 py-3 bg-purple-500'
+                onClick={() => addToCart(id, image, course_name, creator, discounted_price, category)}
+                className='flex w-fit items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-800 duration-500'
               >
                 <FaShoppingCart />
                 Add to cart

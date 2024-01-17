@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import { Layout } from "./layout/Layout"
-import { Courses, Home, SingleCourse } from "./pages"
+// pages
+import { Cart, Courses, Home, SingleCourse } from "./pages"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses/:id" element={<SingleCourse />} />
           <Route path="/category/:category" element={<Courses />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
     </>
